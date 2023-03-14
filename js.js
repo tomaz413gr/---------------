@@ -62,15 +62,26 @@
 
 // ФУНКЦИЯ КОНСТРУКТОР СОЗДАНИЕ ОБЪЕКТОВ!!!
 
-function Person(name, age, spec, city) {
-    this.name = name;
-    this.age = age;
-    this.spec = spec;
-    this.city = city;
-    this.sayHi = function () {
-        console.log(`Привет, меня зовут ${this.name}, мне ${this.age}, я ${this.spec} из города ${this.city}.`);
-    };
-}
-const artem = new Person('Артем', '32', 'веб-разработчик', 'Хабаровск');
-console.log(artem);
-artem.sayHi();
+// function Person(name, age, spec, city) {
+//     this.name = name;
+//     this.age = age;
+//     this.spec = spec;
+//     this.city = city;
+//     this.sayHi = function () {
+//         console.log(`Привет, меня зовут ${this.name}, мне ${this.age}, я ${this.spec} из города ${this.city}.`);
+//     };
+// }
+// const artem = new Person('Артем', '32', 'веб-разработчик', 'Хабаровск');
+// console.log(artem);
+// artem.sayHi();
+
+// ПРАКТИКА!!!
+
+
+const but = document.querySelector('#btn');
+const cont = document.querySelector('#content');
+
+but.addEventListener("click", function(){
+console.log("click");
+cont.classList.toggle('none');
+});
