@@ -113,4 +113,23 @@
 // })
 
 // ПРИМЕР 3. ТАБЫ!!!
+// находим все элементы с data-tab-content
+// const contentBoxes = document.querySelectorAll('[data-tab-content]');
+// // находим все элементы с data-tab
+// const tabHeaders = document.querySelectorAll('[data-tab]');
+// // обходим все элементы(обращаемся к каждому поочередно)
+// tabHeaders.forEach(function (item) {
+//     // отслеживаем клик по каждому из найденных элементов
+//     item.addEventListener('click', function () {
+//         // обходим все элементы(обращаемся к каждому поочередно)
+//         contentBoxes.forEach(function (item) {
+//             // добавляем каждому из элементов класс none
+//             item.classList.add('none');
+//         });
+//         // находим элемент со значением data - "tab"
+//         const contentBox = document.querySelector('#' + this.dataset.tab);
+//         // и убираем у этого элемента класс none
+//         contentBox.classList.remove('none');
+//     })
 
+// })

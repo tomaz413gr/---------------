@@ -1,0 +1,14 @@
+body {
+    width: 1000px;
+    margin: 0 auto;
+}
+.none {
+    display: none;
+}
+.tabs {
+    display: flex;
+}
+.tabs-item {
+    cursor: pointer;
+    margin-right: 20px;
+}
