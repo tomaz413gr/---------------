@@ -75,13 +75,42 @@
 // console.log(artem);
 // artem.sayHi();
 
-// ПРАКТИКА!!!
+// ПРАКТИКА!!! ПРИМЕР 1. ВЫВЕСТИ СКРЫТЬ ЭЛЕМЕНТ ПО НАЖАТИЮ КНОПКИ:
 
 
-const but = document.querySelector('#btn');
-const cont = document.querySelector('#content');
+// const but = document.querySelector('#btn');
+// const cont = document.querySelector('#content');
 
-but.addEventListener("click", function(){
-console.log("click");
-cont.classList.toggle('none');
-});
+// but.addEventListener("click", function () {
+//     console.log("click");
+//     // ВАРИАНТ ПЕРВЫЙ!!!
+//     if (cont.classList.toggle('none')) {
+//         but.textContent = "Открыть блок";
+//     } else {
+//         but.textContent = "Закрыть блок";
+//     }
+// });
+
+// ВАРИАНТ ВТОРОЙ!!!
+
+// cont.classList.toggle('none');
+// if (cont.classList.contains('none')){
+// but.textContent = "Открыть блок";
+// }else {
+//     but.textContent = "Закрыть блок";
+// }
+// });
+
+
+// ПРИМЕР 2. АККОРДЕОН!!!
+
+// const title = document.querySelectorAll('[data-name = "accordeon-title"]');
+// title.forEach(function (item) {
+//     item.addEventListener('click', function () {
+//         // console.log(this.nextElementSibling);
+//         this.nextElementSibling.classList.toggle('none');
+//     })
+// })
+
+// ПРИМЕР 3. ТАБЫ!!!
+
