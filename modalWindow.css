@@ -1,0 +1,28 @@
+.modal_window {
+    width: 600px;
+    height: 200px;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.fade_block {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(102, 230, 90, 0.8);
+}
+button {
+    width: 100px;
+    height: 40px;
+    background-color: rgb(84, 84, 244);
+    color: rgb(24, 21, 21);
+    cursor: pointer;
+}
+.modal_cont {
+    margin-bottom: 30px;
+}
