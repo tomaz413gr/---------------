@@ -8,7 +8,7 @@
     transform: translate(-50%, -50%);
 }
 .fade_block {
-    display: none;
+    
     position: absolute;
     top: 0;
     left: 0;
@@ -25,4 +25,7 @@ button {
 }
 .modal_cont {
     margin-bottom: 30px;
+}
+.none {
+    display: none;
 }

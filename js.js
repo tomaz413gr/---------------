@@ -215,3 +215,10 @@
 
 // МОДАЛЬНОЕ ОКНО(ВСПЛЫВАЮЩЕЕ)!!!!
 
+const button = document.querySelector('[data-modal-button]');
+button.addEventListener('click', function(){
+    console.log('click');
+    const modal = document.querySelector('[data-modal]');
+    console.log(modal);
+    modal.classList.remove('none');
+})
