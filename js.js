@@ -216,9 +216,15 @@
 // МОДАЛЬНОЕ ОКНО(ВСПЛЫВАЮЩЕЕ)!!!!
 
 const button = document.querySelector('[data-modal-button]');
+const modal = document.querySelector('[data-modal]');
+const buttonClose = document.querySelector('[data-modal-close]');
+
 button.addEventListener('click', function(){
-    console.log('click');
-    const modal = document.querySelector('[data-modal]');
-    console.log(modal);
     modal.classList.remove('none');
-})
+});
+buttonClose.addEventListener('click', function(){
+    modal.classList.add('none');
+    modal.addEventListener('click', function(){
+        modal.classList.add('none');
+    })
+});
