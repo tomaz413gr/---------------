@@ -2,7 +2,6 @@
 // let a = 'привет ' + username;
 // console.log(a);
 
-
 // let a = `привет ${username}! как дела?`;
 // console.log(a);
 
@@ -14,9 +13,8 @@
 //     console.log(a[i]);
 // }
 
-
 // let a = ['пися', 'попа', 'шпили', 'ротн', 'долбн'];
-// console.log(a.length); 
+// console.log(a.length);
 
 // ОБХОД МАССИВА С ПОМОЩЬЮ FOR()
 
@@ -77,7 +75,6 @@
 
 // ПРАКТИКА!!! ПРИМЕР 1. ВЫВЕСТИ СКРЫТЬ ЭЛЕМЕНТ ПО НАЖАТИЮ КНОПКИ:
 
-
 // const but = document.querySelector('#btn');
 // const cont = document.querySelector('#content');
 
@@ -100,7 +97,6 @@
 //     but.textContent = "Закрыть блок";
 // }
 // });
-
 
 // ПРИМЕР 2. АККОРДЕОН!!!
 
@@ -215,16 +211,27 @@
 
 // МОДАЛЬНОЕ ОКНО(ВСПЛЫВАЮЩЕЕ)!!!!
 
-const button = document.querySelector('[data-modal-button]');
-const modal = document.querySelector('[data-modal]');
-const buttonClose = document.querySelector('[data-modal-close]');
+const button = document.querySelector("[data-modal-button]");
+const modal = document.querySelector("[data-modal]");
+const buttonClose = document.querySelector("[data-modal-close]");
 
-button.addEventListener('click', function(){
-    modal.classList.remove('none');
+button.addEventListener("click", function () {
+  modal.classList.remove("none");
 });
-buttonClose.addEventListener('click', function(){
-    modal.classList.add('none');
-    modal.addEventListener('click', function(){
-        modal.classList.add('none');
-    })
+buttonClose.addEventListener("click", function () {
+  modal.classList.add("none");
 });
+modal.addEventListener("click", function () {
+  modal.classList.add("none");
+});
+// modal.querySelector(".modal_window").addEventListener("click", function (e) {
+//   e.stopPropagation();
+// });
+const window_modal = document.querySelector(".modal_window");
+console.log(window_modal);
+window_modal.addEventListener('mouseover', function(){
+    window_modal.classList.add('back_window');
+})
+window_modal.addEventListener('mouseout', function(){
+    window_modal.classList.remove('back_window');
+})

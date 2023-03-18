@@ -29,3 +29,6 @@ button {
 .none {
     display: none;
 }
+.back_window {
+    background-color: coral;
+}
