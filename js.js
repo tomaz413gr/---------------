@@ -211,27 +211,43 @@
 
 // МОДАЛЬНОЕ ОКНО(ВСПЛЫВАЮЩЕЕ)!!!!
 
-const button = document.querySelector("[data-modal-button]");
-const modal = document.querySelector("[data-modal]");
-const buttonClose = document.querySelector("[data-modal-close]");
+// const button = document.querySelector("[data-modal-button]");
+// const modal = document.querySelector("[data-modal]");
+// const buttonClose = document.querySelector("[data-modal-close]");
 
-button.addEventListener("click", function () {
-  modal.classList.remove("none");
-});
-buttonClose.addEventListener("click", function () {
-  modal.classList.add("none");
-});
-modal.addEventListener("click", function () {
-  modal.classList.add("none");
-});
+// button.addEventListener("click", function () {
+//   modal.classList.remove("none");
+// });
+// buttonClose.addEventListener("click", function () {
+//   modal.classList.add("none");
+// });
+// modal.addEventListener("click", function () {
+//   modal.classList.add("none");
+// });
 // modal.querySelector(".modal_window").addEventListener("click", function (e) {
 //   e.stopPropagation();
 // });
-const window_modal = document.querySelector(".modal_window");
-console.log(window_modal);
-window_modal.addEventListener('mouseover', function(){
-    window_modal.classList.add('back_window');
-})
-window_modal.addEventListener('mouseout', function(){
-    window_modal.classList.remove('back_window');
+// const window_modal = document.querySelector(".modal_window");
+// console.log(window_modal);
+// window_modal.addEventListener('mouseover', function(){
+//     window_modal.classList.add('back_window');
+// })
+// window_modal.addEventListener('mouseout', function(){
+//     window_modal.classList.remove('back_window');
+// })
+
+// НЕСКОЛЬКО ВСПЛЫАЮЩИХ ОКОН(МОДАЛОК)!!!
+
+// находим нужные элементы!
+const modalButtons = document.querySelectorAll('[data-modal-button]');
+const modal = document.querySelectorAll('[data-modal]');
+const buttonClose = document.querySelectorAll('[data-modal-close');
+
+// прослушиваем клик на кнопке открытия и открываем модалку!!
+modalButtons.forEach(function(item){
+item.addEventListener('click', function(){
+    const modalId = this.dataset.modalButton;
+    const modal = document.querySelector('#' + modalId);
+    console.log(modal);
+});
 })
