@@ -240,14 +240,32 @@
 
 // находим нужные элементы!
 const modalButtons = document.querySelectorAll('[data-modal-button]');
-const modal = document.querySelectorAll('[data-modal]');
-const buttonClose = document.querySelectorAll('[data-modal-close');
-
+const allModals = document.querySelectorAll('[data-modal]');
 // прослушиваем клик на кнопке открытия и открываем модалку!!
 modalButtons.forEach(function(item){
 item.addEventListener('click', function(){
     const modalId = this.dataset.modalButton;
     const modal = document.querySelector('#' + modalId);
-    console.log(modal);
+    modal.classList.remove('none');
+    // запрещаем клику распространяться дальше modal_window
+    modal.querySelector('.modal_window').addEventListener('click', function(e){
+        e.stopPropagation();
+    });
+
 });
+})
+// находим кнопки закрытия и по клику закрываем модалку
+const modalCloseButtons = document.querySelectorAll('[data-modal-close]');
+modalCloseButtons.forEach(function(item){
+    item.addEventListener('click', function(){
+        const modal = this.closest('[data-modal]');
+        modal.classList.add('none');
+       
+    })
+})
+// делаем закрытие модалки по фэйду
+allModals.forEach(function(item){
+    item.addEventListener('click', function(){
+       this.classList.add('none');
+    })
 })
